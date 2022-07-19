@@ -18,3 +18,53 @@
   padding: 1em;
   background-color: blanchedalmond;
 }
+
+.add_form {
+  display: flex;
+  width: 100%;
+  height: 30px;
+}
+
+.add_input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.add_button {
+  font-size: 1.3rem;
+  height: 100%;
+  cursor: pointer;
+}
+
+.todo_form {
+  padding: 10px;
+}
+
+.todo {
+  display: flex;
+  width: 80%;
+  list-style: none;
+  padding: 5px;
+}
+
+.todo span {
+  display: inline-block;
+  flex: 1;
+  padding-bottom: 3px;
+  border-bottom: 1px solid lightgray;
+}
+
+.button_wrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.todo button {
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
