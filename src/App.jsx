@@ -1,7 +1,12 @@
 import "./App.css";
+import Navbar from "./components/navbar";
 
 function App() {
-  return <div className="App">리액트 테스트</div>;
+  return (
+    <div className="App">
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;
