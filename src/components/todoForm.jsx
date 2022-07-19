@@ -1,4 +1,5 @@
 import React from "react";
+import Todo from "./todo";
 import TodoAddForm from "./todoAddForm";
 
 const TodoForm = ({ todoList }) => {
@@ -8,7 +9,7 @@ const TodoForm = ({ todoList }) => {
       <TodoAddForm />
       <ul>
         {todoList.map((todo) => (
-          <li>{todo.name}</li>
+          <Todo key={todo.id} todo={todo} />
         ))}
       </ul>
     </div>
