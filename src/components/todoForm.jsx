@@ -2,13 +2,12 @@ import React from "react";
 import Todo from "./todo";
 import TodoAddForm from "./todoAddForm";
 
-const TodoForm = ({ todoList }) => {
-  console.log(todoList);
+const TodoForm = ({ todos, handleAddTodo }) => {
   return (
     <div className="todo_form">
-      <TodoAddForm />
+      <TodoAddForm handleAddTodo={handleAddTodo} />
       <ul>
-        {todoList.map((todo) => (
+        {todos.map((todo) => (
           <Todo key={todo.id} todo={todo} />
         ))}
       </ul>
