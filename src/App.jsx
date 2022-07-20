@@ -10,11 +10,19 @@ function App({ presenter }) {
     presenter.addTodo(todo, setTodos);
   }, []);
 
+  const handleRemoveTodo = useCallback((todo) => {
+    presenter.removeTodo(todo, setTodos);
+  });
+
   return (
     <div className="App">
       <div className="app_wrapper">
         <Navbar />
-        <TodoForm todos={todos} handleAddTodo={handleAddTodo} />
+        <TodoForm
+          todos={todos}
+          handleAddTodo={handleAddTodo}
+          handleRemoveTodo={handleRemoveTodo}
+        />
       </div>
     </div>
   );
