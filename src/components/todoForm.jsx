@@ -7,6 +7,7 @@ const TodoForm = ({
   handleAddTodo,
   handleRemoveTodo,
   handleIncrease,
+  handleDecrease,
 }) => {
   return (
     <div className="todo_form">
@@ -18,6 +19,7 @@ const TodoForm = ({
             todo={todo}
             handleRemoveTodo={handleRemoveTodo}
             handleIncrease={handleIncrease}
+            handleDecrease={handleDecrease}
           />
         ))}
       </ul>

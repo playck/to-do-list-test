@@ -18,6 +18,10 @@ function App({ presenter }) {
     presenter.increaseTodoCount(todo, setTodos);
   }, []);
 
+  const handleDecrease = useCallback((todo) => {
+    presenter.decreaseTodoCount(todo, setTodos);
+  }, []);
+
   return (
     <div className="App">
       <div className="app_wrapper">
@@ -27,6 +31,7 @@ function App({ presenter }) {
           handleAddTodo={handleAddTodo}
           handleRemoveTodo={handleRemoveTodo}
           handleIncrease={handleIncrease}
+          handleDecrease={handleDecrease}
         />
       </div>
     </div>

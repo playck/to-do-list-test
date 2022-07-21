@@ -26,4 +26,15 @@ export default class TodoPresenter {
     });
     update(this.todos);
   }
+
+  decreaseTodoCount(todo, update) {
+    this.todos = this.todos.map((el) => {
+      if (el.id === todo.id) {
+        const count = el.count - 1;
+        return { ...todo, count: count < 0 ? 0 : count };
+      }
+      return el;
+    });
+    update(this.todos);
+  }
 }
