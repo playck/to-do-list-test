@@ -7,13 +7,23 @@ export default class TodoPresenter {
     return this.todos;
   }
 
-  addTodo(name, update) {
-    this.todos = [...this.todos, { id: Date.now(), name }];
+  addTodo(todo, update) {
+    this.todos = [...this.todos, { id: Date.now(), todo }];
     update(this.todos);
   }
 
-  removeTodo(name, update) {
-    this.todos = this.todos.filter((todo) => todo.id !== name.id);
+  removeTodo(todo, update) {
+    this.todos = this.todos.filter((el) => todo.id !== el.id);
+    update(this.todos);
+  }
+
+  increaseTodoCount(todo, update) {
+    this.todos = this.todos.map((el) => {
+      if (el.id === todo.id) {
+        return { ...todo, count: todo.count + 1 };
+      }
+      return el;
+    });
     update(this.todos);
   }
 }
