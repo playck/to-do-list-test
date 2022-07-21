@@ -8,7 +8,7 @@ export default class TodoPresenter {
   }
 
   addTodo(todo, update) {
-    this.todos = [...this.todos, { id: Date.now(), todo }];
+    this.todos = [...this.todos, { id: Date.now(), name: todo, count: 0 }];
     update(this.todos);
   }
 
@@ -32,6 +32,16 @@ export default class TodoPresenter {
       if (el.id === todo.id) {
         const count = el.count - 1;
         return { ...todo, count: count < 0 ? 0 : count };
+      }
+      return el;
+    });
+    update(this.todos);
+  }
+
+  resetAllTodoCount(update) {
+    this.todos = this.todos.map((el) => {
+      if (el.count !== 0) {
+        return { ...el, count: 0 };
       }
       return el;
     });

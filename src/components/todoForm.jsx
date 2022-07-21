@@ -8,6 +8,7 @@ const TodoForm = ({
   handleRemoveTodo,
   handleIncrease,
   handleDecrease,
+  resetTodoCount,
 }) => {
   return (
     <div className="todo_form">
@@ -23,6 +24,7 @@ const TodoForm = ({
           />
         ))}
       </ul>
+      <button onClick={() => resetTodoCount()}>Reset</button>
     </div>
   );
 };

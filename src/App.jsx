@@ -22,6 +22,10 @@ function App({ presenter }) {
     presenter.decreaseTodoCount(todo, setTodos);
   }, []);
 
+  const resetTodoCount = useCallback(() => {
+    presenter.resetAllTodoCount(setTodos);
+  });
+
   return (
     <div className="App">
       <div className="app_wrapper">
@@ -32,6 +36,7 @@ function App({ presenter }) {
           handleRemoveTodo={handleRemoveTodo}
           handleIncrease={handleIncrease}
           handleDecrease={handleDecrease}
+          resetTodoCount={resetTodoCount}
         />
       </div>
     </div>
