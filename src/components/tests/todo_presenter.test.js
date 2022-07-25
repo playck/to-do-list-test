@@ -22,15 +22,18 @@ describe("todoPresenter", () => {
     presenter.increaseTodoCount(todos[0], update);
 
     expect(presenter.getTodos()[0].count).toBe(2);
-    expect(update).toHaveBeenCalledTimes(1);
-    expect(update).toHaveBeenCalledWith(presenter.getTodos());
+    checkUpdate();
   });
 
   it("decrease todo count and call update callback", () => {
     presenter.decreaseTodoCount(todos[0], update);
 
     expect(presenter.getTodos()[0].count).toBe(0);
+    checkUpdate();
+  });
+
+  function checkUpdate() {
     expect(update).toHaveBeenCalledTimes(1);
     expect(update).toHaveBeenCalledWith(presenter.getTodos());
-  });
+  }
 });
