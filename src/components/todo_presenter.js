@@ -1,6 +1,7 @@
 export default class TodoPresenter {
-  constructor(todos) {
+  constructor(todos, maxTodos) {
     this.todos = todos;
+    this.maxTodos = maxTodos;
   }
 
   getTodos() {
@@ -8,6 +9,9 @@ export default class TodoPresenter {
   }
 
   addTodo(todo, update) {
+    if (this.todos.length === this.maxTodos) {
+      throw new Error(`할 일은 ${this.maxTodos} 이상이 될 수 없음`);
+    }
     this.todos = [...this.todos, { id: Date.now(), name: todo, count: 0 }];
     update(this.todos);
   }

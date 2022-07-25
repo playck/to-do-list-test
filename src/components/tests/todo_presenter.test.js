@@ -10,7 +10,7 @@ describe("todoPresenter", () => {
   let update;
 
   beforeEach(() => {
-    presenter = new TodoPresenter(todos);
+    presenter = new TodoPresenter(todos, 3);
     update = jest.fn();
   });
 
@@ -53,6 +53,13 @@ describe("todoPresenter", () => {
     expect(presenter.getTodos()[2].name).toBe("운동");
     expect(presenter.getTodos()[2].count).toBe(0);
     checkUpdate();
+  });
+
+  it("throws an error when the max todos count is exceeded", () => {
+    presenter.addTodo("운동", update);
+    expect(() => {
+      presenter.addTodo("운동", update);
+    }).toThrow(`할 일은 3 이상이 될 수 없음`);
   });
 
   it("resets all count to zero", () => {
