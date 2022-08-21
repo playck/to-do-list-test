@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders 1`] = `
+<nav
+  className="navbar"
+>
+  <span>
+    To-Do-List
+  </span>
+</nav>
+`;
