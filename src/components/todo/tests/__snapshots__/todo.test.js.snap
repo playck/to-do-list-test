@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo component renders 1`] = `
+<li
+  className="todo"
+>
+  <span>
+    todo
+  </span>
+  <span>
+    3
+  </span>
+  <div
+    className="button_wrapper"
+  >
+    <button
+      onClick={[Function]}
+      title="increase"
+    >
+      +
+    </button>
+    <button
+      onClick={[Function]}
+      title="decrease"
+    >
+      -
+    </button>
+    <button
+      onClick={[Function]}
+      title="remove"
+    >
+      X
+    </button>
+  </div>
+</li>
+`;
