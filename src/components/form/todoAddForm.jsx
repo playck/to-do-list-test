@@ -19,7 +19,9 @@ const TodoAddForm = ({ handleAddTodo }) => {
         className="add_input"
         placeholder="할 일은?"
       />
-      <button className="add_button">+</button>
+      <button className="add_button" style={{ fontSize: "10px" }}>
+        등록
+      </button>
     </form>
   );
 };
