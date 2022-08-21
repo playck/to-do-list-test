@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoAddForm redners 1`] = `
+<form
+  className="add_form"
+  onSubmit={[Function]}
+>
+  <input
+    className="add_input"
+    placeholder="할 일은?"
+    type="text"
+  />
+  <button
+    className="add_button"
+    style={
+      Object {
+        "fontSize": "10px",
+      }
+    }
+  >
+    등록
+  </button>
+</form>
+`;
