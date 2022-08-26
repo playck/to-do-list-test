@@ -3,8 +3,8 @@ import React from "react";
 const Todo = ({ todo, handleRemoveTodo, handleIncrease, handleDecrease }) => {
   return (
     <li className="todo">
-      <span>{todo.name}</span>
-      <span>{todo.count}</span>
+      <span data-testid="todo-name">{todo.name}</span>
+      <span data-testid="todo-count">{todo.count}</span>
       <div className="button_wrapper">
         <button title="increase" onClick={() => handleIncrease(todo)}>
           +

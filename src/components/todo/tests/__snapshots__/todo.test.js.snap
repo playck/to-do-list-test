@@ -4,10 +4,14 @@ exports[`Todo component renders 1`] = `
 <li
   className="todo"
 >
-  <span>
+  <span
+    data-testid="todo-name"
+  >
     todo
   </span>
-  <span>
+  <span
+    data-testid="todo-count"
+  >
     3
   </span>
   <div

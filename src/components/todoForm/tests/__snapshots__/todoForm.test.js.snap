@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoForm component renders 1`] = `
+<div
+  className="todo_form"
+>
+  <form
+    className="add_form"
+    onSubmit={[Function]}
+  >
+    <input
+      className="add_input"
+      placeholder="할 일은?"
+      type="text"
+    />
+    <button
+      className="add_button"
+      style={
+        Object {
+          "fontSize": "10px",
+        }
+      }
+    >
+      등록
+    </button>
+  </form>
+  <ul>
+    <li
+      className="todo"
+    >
+      <span
+        data-testid="todo-name"
+      >
+        영화보기
+      </span>
+      <span
+        data-testid="todo-count"
+      >
+        2
+      </span>
+      <div
+        className="button_wrapper"
+      >
+        <button
+          onClick={[Function]}
+          title="increase"
+        >
+          +
+        </button>
+        <button
+          onClick={[Function]}
+          title="decrease"
+        >
+          -
+        </button>
+        <button
+          onClick={[Function]}
+          title="remove"
+        >
+          X
+        </button>
+      </div>
+    </li>
+    <li
+      className="todo"
+    >
+      <span
+        data-testid="todo-name"
+      >
+        운동
+      </span>
+      <span
+        data-testid="todo-count"
+      >
+        3
+      </span>
+      <div
+        className="button_wrapper"
+      >
+        <button
+          onClick={[Function]}
+          title="increase"
+        >
+          +
+        </button>
+        <button
+          onClick={[Function]}
+          title="decrease"
+        >
+          -
+        </button>
+        <button
+          onClick={[Function]}
+          title="remove"
+        >
+          X
+        </button>
+      </div>
+    </li>
+  </ul>
+  <button
+    onClick={[Function]}
+  >
+    Reset
+  </button>
+</div>
+`;
