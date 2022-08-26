@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
-import TodoPresenter from "./components/todo_presenter";
+import App from "./app/App";
+import TodoPresenter from "./app/todo_presenter";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const todoPresenter = new TodoPresenter([

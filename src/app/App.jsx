@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import "./App.css";
-import Navbar from "./components/navbar";
-import TodoForm from "./components/todoForm";
+import Navbar from "../components/navbar/navbar";
+import TodoForm from "../components/todoForm/todoForm";
 
 function App({ presenter }) {
   const [todos, setTodos] = useState(presenter.getTodos());
